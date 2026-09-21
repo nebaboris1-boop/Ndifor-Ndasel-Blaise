@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volt Power electronics <Ltd>Power electronics Ltd &amp; Smart Solutions</title>
+  <meta name="description" content="Volt Power electronic Ltd GLOBAL COMPANY — licensed electricians providing industrial, commercial and residential electrical services, smart home automation, and emergency repairs." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <!-- ScrollReveal for scroll-triggered animations -->
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <a href="#home" class="logo" aria-label="VoltEdge Electrical Home">
+        <span class="logo-icon">
+          <i data-lucide="zap"></i>
+        </span>
+        <span class="logo-text">Volt Power<span class="accent"> electronics Ltd</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#projects" class="nav-link">Work</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link">contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="tel:+237680440291" class="btn btn-call pulse" aria-label="Call now">
+          <i data-lucide="phone-call"></i>
+          <span>Call Now</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <canvas id="circuitCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+
+    <div class="hero-content container">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <span class="eyebrow reveal"><i data-lucide="shield-check"></i> Licensed &amp; Insured Master Electricians</span>
+          <h1 class="hero-title reveal">
+            Powering <span class="accent-gradient">Precision</span>,
+            Reliability &amp; Smart Electrical Solutions
+          </h1>
+          <p class="hero-subtitle reveal">
+            From industrial conduit runs to whole-home automation — safety-certified expertise,
+            modern diagnostics, and rapid emergency response, 24/7.
+          </p>
+
+          <div class="hero-ctas reveal">
+            <a href="#contact" class="btn btn-primary">
+              <i data-lucide="file-text"></i> Request a Quote
+            </a>
+            <a href="#services" class="btn btn-outline">
+              <i data-lucide="wrench"></i> View Services
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero image panel -->
+        <div class="hero-image reveal">
+          <div class="hero-image-frame">
+            <img src="cappo.jpeg" viewBox="0 0 400 420" xmlns="" role="img" aria-label="Illustration of an electrical control panel">
+              <defs>
+                <linearGradient id="heroPanelBg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#1a2438"/>
+                  <stop offset="100%" stop-color="#0b0f19"/>
+                </linearGradient>
+                <linearGradient id="heroWire" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#FFB800"/>
+                  <stop offset="100%" stop-color="#00D2FF"/>
+                </linearGradient>
+              </defs>
+              <rect x="0" y="0" width="400" height="420" rx="28" fill="url(#heroPanelBg)"/>
+              <!-- Panel door outline -->
+              <rect x="30" y="30" width="340" height="360" rx="18" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+              <!-- Breaker switch rows -->
+              <g fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5">
+                <rect x="0" y="0" width="0" height="0"/>
+              </g>
+              <g>
+                <!-- breaker grid -->
+                <g id="breakerRow">
+                  <rect x="58" y="70" width="26" height="46" rx="4" fill="#0b0f19" stroke="#FFB800" stroke-width="1.5"/>
+                  <rect x="98" y="70" width="26" height="46" rx="4" fill="#0b0f19" stroke="#00D2FF" stroke-width="1.5"/>
+                  <rect x="138" y="70" width="26" height="46" rx="4" fill="#0b0f19" stroke="#FFB800" stroke-width="1.5"/>
+                  <rect x="178" y="70" width="26" height="46" rx="4" fill="#0b0f19" stroke="#00D2FF" stroke-width="1.5"/>
+                  <rect x="218" y="70" width="26" height="46" rx="4" fill="#0b0f19" stroke="#FFB800" stroke-width="1.5"/>
+                  <rect x="258" y="70" width="26" height="46" rx="4" fill="#0b0f19" stroke="#00D2FF" stroke-width="1.5"/>
+                  <rect x="298" y="70" width="26" height="46" rx="4" fill="#0b0f19" stroke="#FFB800" stroke-width="1.5"/>
+                </g>
+                <use href="#breakerRow" y="76"/>
+                <use href="#breakerRow" y="152"/>
+              </g>
+              <!-- Status LEDs -->
+              <circle cx="71" cy="82" r="3" fill="#2ee66b"/>
+              <circle cx="111" cy="82" r="3" fill="#2ee66b"/>
+              <circle cx="151" cy="82" r="3" fill="#FFB800"/>
+              <circle cx="191" cy="82" r="3" fill="#2ee66b"/>
+              <circle cx="231" cy="82" r="3" fill="#2ee66b"/>
+              <circle cx="271" cy="82" r="3" fill="#00D2FF"/>
+              <circle cx="311" cy="82" r="3" fill="#2ee66b"/>
+              <!-- Wiring bundle -->
+              <path d="M 60 260 C 120 240, 160 300, 220 270 S 320 240, 350 280" fill="none" stroke="url(#heroWire)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M 55 285 C 115 270, 165 320, 225 295 S 325 265, 355 305" fill="none" stroke="rgba(0,210,255,0.4)" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 65 310 C 125 300, 155 340, 215 320 S 315 295, 345 330" fill="none" stroke="rgba(255,184,0,0.35)" stroke-width="2" stroke-linecap="round"/>
+              <!-- Meter gauge -->
+              <circle cx="200" cy="360" r="26" fill="#0b0f19" stroke="url(#heroWire)" stroke-width="2.5"/>
+              <line x1="200" y1="360" x2="212" y2="346" stroke="#FFB800" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="200" cy="360" r="2.5" fill="#FFB800"/>
+              <!-- Bolt watermark -->
+              <path d="M 210 150 L 190 190 L 205 190 L 185 230 L 225 185 L 208 185 Z" fill="rgba(255,184,0,0.12)"/>
+            </svg>
+
+            <div class="hero-badge-float">
+              <i data-lucide="shield-check"></i>
+              <div><strong>Certified Safe</strong><span>NEC / IEC Compliant</span></div>
+            </div>
+            <div class="hero-badge-float hero-badge-bottom">
+              <i data-lucide="clock"></i>
+              <div><strong>~45 min</strong><span>Avg. Response Time</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-number" data-count="1200">0</span><span class="stat-suffix">+</span>
+          <p>Projects Completed</p>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="15">0</span><span class="stat-suffix">+</span>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="980">0</span><span class="stat-suffix">+</span>
+          <p>Satisfied Clients</p>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="24">0</span><span class="stat-suffix">/7</span>
+          <p>Emergency Support</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <i data-lucide="chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-visual reveal">
+        <div class="about-image-frame">
+          <img src="power bank.jpg" viewBox="0 0 360 440" xmlns="" role="img" aria-label="Illustration of an electrician's tools and wiring">
+            <defs>
+              <linearGradient id="aboutBg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#16203a"/>
+                <stop offset="100%" stop-color="#0b0f19"/>
+              </linearGradient>
+              <linearGradient id="aboutAccent" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#00D2FF"/>
+                <stop offset="100%" stop-color="#FFB800"/>
+              </linearGradient>
+            </defs>
+            <rect width="360" height="440" rx="24" fill="url(#aboutBg)"/>
+
+            <!-- Coiled cable -->
+            <path d="M 60 340 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30"
+                  fill="none" stroke="url(#aboutAccent)" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+
+            <!-- Multimeter -->
+            <rect x="55" y="120" width="90" height="130" rx="10" fill="#0b0f19" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+            <rect x="68" y="134" width="64" height="38" rx="4" fill="#101623" stroke="#00D2FF" stroke-width="1.5"/>
+            <text x="100" y="158" text-anchor="middle" font-family="monospace" font-size="14" fill="#00D2FF">220V</text>
+            <circle cx="100" cy="210" r="24" fill="#0b0f19" stroke="#FFB800" stroke-width="2"/>
+            <line x1="100" y1="210" x2="112" y2="196" stroke="#FFB800" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="76" cy="230" r="4" fill="rgba(255,255,255,0.2)"/>
+            <circle cx="124" cy="230" r="4" fill="rgba(255,255,255,0.2)"/>
+
+            <!-- Wrench -->
+            <g transform="translate(210,110) rotate(35)">
+              <rect x="0" y="0" width="14" height="120" rx="7" fill="#2a3652"/>
+              <path d="M -10 -4 a 17 17 0 1 0 34 0 a 17 17 0 1 0 -34 0" fill="none" stroke="#2a3652" stroke-width="10"/>
+            </g>
+
+            <!-- Screwdriver -->
+            <g transform="translate(260,150) rotate(-20)">
+              <rect x="0" y="0" width="8" height="90" rx="4" fill="#3a4666"/>
+              <rect x="-6" y="88" width="20" height="46" rx="6" fill="url(#aboutAccent)"/>
+            </g>
+
+            <!-- Circuit dots -->
+            <circle cx="290" cy="320" r="3" fill="#FFB800"/>
+            <circle cx="310" cy="340" r="3" fill="#00D2FF"/>
+            <circle cx="270" cy="345" r="3" fill="#FFB800"/>
+            <path d="M 290 320 L 310 340 M 290 320 L 270 345" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+
+            <!-- Bolt watermark -->
+            <path d="M 200 40 L 178 84 L 196 84 L 172 128 L 218 78 L 198 78 Z" fill="rgba(0,210,255,0.1)"/>
+          </svg>
+        </div>
+
+        <div class="about-card-glass floating">
+          <i data-lucide="award"></i>
+          <h3>Certified &amp; Compliant</h3>
+          <p>NEC / IEC standards, OSHA safety training, and continuous certification renewal.</p>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <span class="section-tag reveal">Who We Are</span>
+        <h2 class="section-title reveal">Trusted Electrical Expertise, Built on Safety &amp; Precision</h2>
+        <p class="reveal">
+          With over 15 years in the field, VoltEdge Electrical delivers industrial-grade reliability
+          to residential and commercial clients alike. Our team of licensed electricians blends
+          hands-on craftsmanship with modern diagnostic tools — ensuring every installation, repair,
+          and upgrade meets the highest safety and performance standards.
+        </p>
+        <p class="reveal">
+          We specialize in everything from complex conduit &amp; piping systems to battery storage
+          integration and full smart-home wiring — engineered to last, backed by warranty.
+        </p>
+
+        <div class="badge-grid reveal">
+          <div class="badge-card">
+            <i data-lucide="badge-check"></i>
+            <span>Licensed Master Electricians</span>
+          </div>
+          <div class="badge-card">
+            <i data-lucide="shield"></i>
+            <span>Fully Insured &amp; Bonded</span>
+          </div>
+          <div class="badge-card">
+            <i data-lucide="battery-charging"></i>
+            <span>Battery Storage Certified</span>
+          </div>
+          <div class="badge-card">
+            <i data-lucide="home"></i>
+            <span>Smart Home Specialists</span>
+          </div>
+          <div class="badge-card">
+            <i data-lucide="siren"></i>
+            <span>24/7 Emergency Response</span>
+          </div>
+          <div class="badge-card">
+            <i data-lucide="leaf"></i>
+            <span>Energy-Efficient Solutions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="services" id="services">
+    <div class="container">
+      <span class="section-tag reveal center">What We Do</span>
+      <h2 class="section-title reveal center">Comprehensive Electrical Services</h2>
+      <p class="section-sub reveal center">
+        Industrial-grade capability with residential care — every job wired to code.
+      </p>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-icon"><i data-lucide="cable"></i></div>
+          <h3>Piping &amp; Conduit Installation</h3>
+          <p>Industrial, commercial &amp; residential conduit runs — EMT, rigid, and flexible systems installed to code.</p>
+          <a href="#contact" class="service-link">Get a Quote <i data-lucide="arrow-right"></i></a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon"><i data-lucide="battery-full"></i></div>
+          <h3>Power Bank &amp; Battery Storage</h3>
+          <p>Design, assembly, repair &amp; maintenance of home and commercial battery backup / storage systems.</p>
+          <a href="#contact" class="service-link">Get a Quote <i data-lucide="arrow-right"></i></a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon"><i data-lucide="house-wifi"></i></div>
+          <h3>Smart Home Automation</h3>
+          <p>Full smart wiring — lighting control, smart panels, EV chargers, and integrated home automation.</p>
+          <a href="#contact" class="service-link">Get a Quote <i data-lucide="arrow-right"></i></a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon"><i data-lucide="square-activity"></i></div>
+          <h3>Panel Upgrades &amp; Troubleshooting</h3>
+          <p>Circuit breaker panel upgrades, load balancing, and precision fault diagnostics &amp; repair.</p>
+          <a href="#contact" class="service-link">Get a Quote <i data-lucide="arrow-right"></i></a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon"><i data-lucide="siren"></i></div>
+          <h3>Emergency Electrical Repairs</h3>
+          <p>Rapid-response repairs for outages, sparking outlets, and hazardous wiring — available 24/7.</p>
+          <a href="#contact" class="service-link">Get a Quote <i data-lucide="arrow-right"></i></a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon"><i data-lucide="lightbulb"></i></div>
+          <h3>Lighting &amp; Fixture Design</h3>
+          <p>Interior/exterior lighting design, LED retrofits, and energy-efficient fixture installation.</p>
+          <a href="#contact" class="service-link">Get a Quote <i data-lucide="arrow-right"></i></a>
+        </article>
+      </div>
+
+      <!-- Interactive Quote Estimator -->
+      <div class="estimator reveal">
+        <div class="estimator-header">
+          <h3><i data-lucide="calculator"></i> Instant Service Estimator</h3>
+          <p>Select a service and scope to preview an estimated quote range. No obligation.</p>
+        </div>
+
+        <div class="estimator-tabs" id="estimatorTabs">
+          <button class="est-tab active" data-service="conduit" data-base="12500CFA" data-rate="15000CFA">Conduit</button>
+          <button class="est-tab" data-service="battery" data-base="80000CFA" data-rate="120000CFA">Battery Storage</button>
+          <button class="est-tab" data-service="smart" data-base="3000CFA" data-rate="5000CFA">Smart Home</button>
+          <button class="est-tab" data-service="panel" data-base="75000CFA" data-rate="90000CFA">Panel Upgrade</button>
+          <button class="est-tab" data-service="emergency" data-base="5000CFA" data-rate="10000CFA">Emergency</button>
+        </div>
+
+        <div class="estimator-body">
+          <div class="estimator-control">
+            <label for="scopeRange">Estimated Scope (hours of labor): <span id="scopeVal">4</span> hrs</label>
+            <input type="range" id="scopeRange" min="1" max="20" value="4" />
+          </div>
+          <div class="estimator-result">
+            <span class="estimator-label">Estimated Range</span>
+            <span class="estimator-price" id="estimatorPrice">6500CFA – 8000CFA</span>
+            <a href="#contact" class="btn btn-primary btn-sm">Book This Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <span class="section-tag reveal center">Our Work</span>
+      <h2 class="section-title reveal center">Featured Projects</h2>
+      <p class="section-sub reveal center">A snapshot of recent installations across residential, commercial &amp; industrial sites.</p>
+
+      <div class="filter-bar reveal" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="piping">Piping</button>
+        <button class="filter-btn" data-filter="power">Power Banks</button>
+        <button class="filter-btn" data-filter="residential">Residential</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card reveal" data-category="piping commercial">
+          <div class="project-face project-front">
+            <div class="project-thumb thumb-1">
+              <img src="conduits.jpg" viewBox="0 0 200 120"  role="img" aria-label="Conduit piping illustration">
+                <rect width="200" height="120" fill="#ffb800" opacity="0.001"/>
+                <g stroke="rgba(11,15,25,0.55)" stroke-width="7" stroke-linecap="round" fill="none">
+                  <path d="M -10 30 H 90 a 14 14 0 0 1 14 14 V 90 H 220"/>
+                  <path d="M -10 60 H 60 a 14 14 0 0 0 14 -14 V 20 H 220"/>
+                </g>
+                <g fill="rgba(11,15,25,0.35)">
+                  <circle cx="30" cy="30" r="5"/>
+                  <circle cx="150" cy="90" r="5"/>
+                  <circle cx="104" cy="46" r="5"/>
+                </g>
+              </svg>
+            </div>
+            <h4>Warehouse Conduit Overhaul</h4>
+            <span class="project-tag">Piping · Commercial</span>
+          </div>
+          <div class="project-face project-back">
+            <h4>Warehouse Conduit Overhaul</h4>
+            <ul>
+              <li><i data-lucide="check"></i> 2,400 ft of rigid EMT conduit</li>
+              <li><i data-lucide="check"></i> 3-phase distribution rewire</li>
+              <li><i data-lucide="check"></i> Completed in 9 working days</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="power residential">
+          <div class="project-face project-front">
+            <div class="project-thumb thumb-2">
+              <img src="retail panel.jpg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Battery storage illustration">
+                <g fill="none" stroke="rgba(11,15,25,0.55)" stroke-width="4">
+                  <rect x="20" y="30" width="34" height="60" rx="5"/>
+                  <rect x="30" y="22" width="14" height="10" rx="2" fill="rgba(11,15,25,0.55)" stroke="none"/>
+                  <rect x="70" y="30" width="34" height="60" rx="5"/>
+                  <rect x="80" y="22" width="14" height="10" rx="2" fill="rgba(11,15,25,0.55)" stroke="none"/>
+                  <rect x="120" y="30" width="34" height="60" rx="5"/>
+                  <rect x="130" y="22" width="14" height="10" rx="2" fill="rgba(11,15,25,0.55)" stroke="none"/>
+                </g>
+                <path d="M34 50 L44 50 L38 62 L48 62 L32 80 L38 66 L28 66 Z" fill="rgba(11,15,25,0.6)"/>
+                <path d="M84 50 L94 50 L88 62 L98 62 L82 80 L88 66 L78 66 Z" fill="rgba(11,15,25,0.6)"/>
+                <path d="M134 50 L144 50 L138 62 L148 62 L132 80 L138 66 L128 66 Z" fill="rgba(11,15,25,0.6)"/>
+              </svg>
+            </div>
+            <h4>Residential Battery Backup</h4>
+            <span class="project-tag">Power Bank · Residential</span>
+          </div>
+          <div class="project-face project-back">
+            <h4>Residential Battery Backup</h4>
+            <ul>
+              <li><i data-lucide="check"></i> 13.5kWh storage installation</li>
+              <li><i data-lucide="check"></i> Automatic transfer switch</li>
+              <li><i data-lucide="check"></i> Solar integration ready</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="residential">
+          <div class="project-face project-front">
+            <div class="project-thumb thumb-3">
+              <img src="solar battery storage.jpg" viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Smart home illustration">
+                <path d="M 100 25 L 40 65 V 100 H 160 V 65 Z" fill="none" stroke="rgba(11,15,25,0.55)" stroke-width="5" stroke-linejoin="round"/>
+                <rect x="90" y="75" width="20" height="25" fill="rgba(11,15,25,0.5)"/>
+                <g fill="none" stroke="rgba(11,15,25,0.5)" stroke-width="4" stroke-linecap="round">
+                  <path d="M100 45 a 28 28 0 0 1 28 28"/>
+                  <path d="M100 45 a 40 40 0 0 1 40 40"/>
+                </g>
+                <circle cx="100" cy="45" r="4" fill="rgba(11,15,25,0.6)"/>
+              </svg>
+            </div>
+            <h4>Smart Home Full Rewire</h4>
+            <span class="project-tag">Smart Home · Residential</span>
+          </div>
+          <div class="project-face project-back">
+            <h4>Smart Home Full Rewire</h4>
+            <ul>
+              <li><i data-lucide="check"></i> Whole-home smart panel</li>
+              <li><i data-lucide="check"></i> 40+ smart switch endpoints</li>
+              <li><i data-lucide="check"></i> EV charger circuit added</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="piping industrial commercial">
+          <div class="project-face project-front">
+            <div class="project-thumb thumb-4">
+              <img src="cappo.jpeg" viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Industrial plant illustration">
+                <path d="M 20 95 V 55 L 55 70 V 55 L 90 70 V 40 H 105 V 60 H 175 V 95 Z" fill="rgba(11,15,25,0.5)"/>
+                <rect x="35" y="18" width="10" height="25" fill="rgba(11,15,25,0.5)"/>
+                <rect x="60" y="10" width="10" height="33" fill="rgba(11,15,25,0.5)"/>
+                <circle cx="40" cy="14" r="6" fill="none" stroke="rgba(11,15,25,0.4)" stroke-width="3"/>
+                <circle cx="65" cy="6" r="6" fill="none" stroke="rgba(11,15,25,0.4)" stroke-width="3"/>
+              </svg>
+            </div>
+            <h4>Industrial Plant Piping</h4>
+            <span class="project-tag">Piping · Industrial</span>
+          </div>
+          <div class="project-face project-back">
+            <h4>Industrial Plant Piping</h4>
+            <ul>
+              <li><i data-lucide="check"></i> Explosion-proof conduit runs</li>
+              <li><i data-lucide="check"></i> High-voltage feeder install</li>
+              <li><i data-lucide="check"></i> Zero downtime execution</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="power commercial">
+          <div class="project-face project-front">
+            <div class="project-thumb thumb-5">
+              <img src="blaise photo.jpeg" viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Server rack illustration">
+                <g fill="none" stroke="rgba(11,15,25,0.55)" stroke-width="4">
+                  <rect x="55" y="20" width="90" height="24" rx="3"/>
+                  <rect x="55" y="48" width="90" height="24" rx="3"/>
+                  <rect x="55" y="76" width="90" height="24" rx="3"/>
+                </g>
+                <circle cx="66" cy="32" r="3" fill="rgba(11,15,25,0.6)"/>
+                <circle cx="66" cy="60" r="3" fill="rgba(11,15,25,0.6)"/>
+                <circle cx="66" cy="88" r="3" fill="rgba(11,15,25,0.6)"/>
+                <rect x="80" y="28" width="45" height="8" fill="rgba(11,15,25,0.35)"/>
+                <rect x="80" y="56" width="45" height="8" fill="rgba(11,15,25,0.35)"/>
+                <rect x="80" y="84" width="45" height="8" fill="rgba(11,15,25,0.35)"/>
+              </svg>
+            </div>
+            <h4>Commercial UPS Bank</h4>
+            <span class="project-tag">Power Bank · Commercial</span>
+          </div>
+          <div class="project-face project-back">
+            <h4>Commercial UPS Bank</h4>
+            <ul>
+              <li><i data-lucide="check"></i> 60kVA UPS array assembly</li>
+              <li><i data-lucide="check"></i> Server room redundancy</li>
+              <li><i data-lucide="check"></i> Quarterly maintenance plan</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="commercial">
+          <div class="project-face project-front">
+            <div class="project-thumb thumb-6">
+              <img src="ups store.jpg" viewBox="0 0 200 120" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Electrical panel illustration">
+                <rect x="50" y="18" width="100" height="84" rx="8" fill="none" stroke="rgba(11,15,25,0.5)" stroke-width="4"/>
+                <g fill="rgba(11,15,25,0.5)">
+                  <rect x="62" y="30" width="14" height="24" rx="2"/>
+                  <rect x="84" y="30" width="14" height="24" rx="2"/>
+                  <rect x="106" y="30" width="14" height="24" rx="2"/>
+                  <rect x="128" y="30" width="14" height="24" rx="2"/>
+                  <rect x="62" y="62" width="14" height="24" rx="2"/>
+                  <rect x="84" y="62" width="14" height="24" rx="2"/>
+                  <rect x="106" y="62" width="14" height="24" rx="2"/>
+                  <rect x="128" y="62" width="14" height="24" rx="2"/>
+                </g>
+              </svg>
+            </div>
+            <h4>Retail Panel Upgrade</h4>
+            <span class="project-tag">Panel Upgrade · Commercial</span>
+          </div>
+          <div class="project-face project-back">
+            <h4>Retail Panel Upgrade</h4>
+            <ul>
+              <li><i data-lucide="check"></i> 400A service upgrade</li>
+              <li><i data-lucide="check"></i> Load-balanced sub-panels</li>
+              <li><i data-lucide="check"></i> Full code compliance pass</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <span class="section-tag reveal center">Client Reviews</span>
+      <h2 class="section-title reveal center">What Our Clients Say</h2>
+
+      <div class="testimonial-slider reveal">
+        <div class="testimonial-track" id="testimonialTrack">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Volt power electronics Ltd rewired our entire warehouse without a single day of downtime. Professional, fast, and spotless work."</p>
+            <div class="testimonial-author">
+              <div class="avatar">JM</div>
+              <div><strong>NEBA BORIS the facilitor</strong><span>NDIFOR BLAISE the Manager</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"The smart home installation exceeded expectations. Clean wiring, clear communication, and it just works."</p>
+            <div class="testimonial-author">
+              <div class="avatar">SL</div>
+              <div><strong>Sarah Lin</strong><span>Homeowner</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Called or contact me for an emergency at 11pm — I showed up in 40 minutes and fixed a serious fire hazard."</p>
+            <div class="testimonial-author">
+              <div class="avatar">DK</div>
+              <div><strong>ndiforndaselblesss</strong><span>VOLT POWER ELCTRONICS Ltd  Owner</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Battery backup system has been flawless through two outages. Worth every penny for the peace of mind."</p>
+            <div class="testimonial-author">
+              <div class="avatar">AR</div>
+              <div><strong>Ndifor Blaise</strong><span>Property Owner</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button id="prevSlide" aria-label="Previous testimonial"><i data-lucide="chevron-left"></i></button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button id="nextSlide" aria-label="Next testimonial"><i data-lucide="chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="faq">
+    <div class="container">
+      <span class="section-tag reveal center">FAQ</span>
+      <h2 class="section-title reveal center">Common Questions</h2>
+
+      <div class="accordion reveal" id="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>I am a licensed and insured?</span>
+            <i data-lucide="plus"></i>
+          </button>
+          <div class="accordion-panel">
+            <p>Yes — all my electricians are fully licensed, bonded, and insured, with certifications renewed annually per NEC/IEC standards.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>I do offer emergency service on weekends?</span>
+            <i data-lucide="plus"></i>
+          </button>
+          <div class="accordion-panel">
+            <p>Absolutely. Our emergency line is staffed 24/7, including weekends and holidays, with typical response under 45 minutes locally.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Can integrate battery storage with existing solar?</span>
+            <i data-lucide="plus"></i>
+          </button>
+          <div class="accordion-panel">
+            <p>Yes — we design and retrofit battery storage systems to work with most existing solar inverters and monitoring platforms.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>How do I get an accurate quote?</span>
+            <i data-lucide="plus"></i>
+          </button>
+          <div class="accordion-panel">
+            <p>Use the Instant Estimator above for a ballpark range, then submit the contact form or call us for a free, no-obligation on-site quote.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Request Your Free Quote</h2>
+        <p>Tell us about your problem(fault)and we'll respond within one business hour — sooner for emergencies.</p>
+
+        <div class="status-indicator">
+          <span class="status-dot"></span> Available for Emergency Calls
+        </div>
+
+        <div class="contact-cards">
+          <a href="tel:+237680440291" class="contact-card">
+            <i data-lucide="phone"></i>
+            <div><strong>Phone/Whatsapp</strong><span>+(237) 680440291</span></div>
+          </a>
+          <a href="https://wa.me/680440291" class="contact-card" target="_blank" rel="noopener">
+            <i data-lucide="message-circle"></i>
+            <div><strong>WhatsApp</strong><span>Chat with us</span></div>
+          </a>
+          <a href="mailto:contactndiforndaselbless@voltedge.com" class="contact-card">
+            <i data-lucide="mail"></i>
+            <div><strong>Email</strong><span>ndiforndaselblesss@gmail.com</span></div>
+          </a>
+          <div class="contact-card">
+            <i data-lucide="map-pin"></i>
+            <div><strong>Service Area</strong><span>ALL regions around cameroon</span></div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="name">full Name</label>
+          <input type="text" id="name" name="name" placeholder="" required />
+        </div>
+        <div class="form-row">
+          <label for="phone">Contact</label>
+          <input type="tel" id="phone" name="phone" placeholder="(+237)" required />
+        </div>
+        <div class="form-row">
+          <label for="serviceType">Service Type</label>
+          <select id="serviceType" name="serviceType" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="conduit">Piping &amp; Conduit Installation</option>
+            <option value="battery">Power Bank &amp; Battery Storage</option>
+            <option value="smart">Smart Home Automation</option>
+            <option value="panel">Panel Upgrade / Troubleshooting</option>
+            <option value="emergency">Emergency Repair</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Describe your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width">
+          <i data-lucide="send"></i> Send Request
+        </button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-icon"><i data-lucide="zap"></i></span>
+          <span class="logo-text">Volt<span class="accent">Edge</span></span>
+        </a>
+        <p>Powering precision, reliability, and smart electrical solutions since 2011.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a href="#" aria-label="Twitter/X"><i data-lucide="twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Work</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="#services">Conduit Installation</a>
+        <a href="#services">Battery Storage</a>
+        <a href="#services">Smart Home Wiring</a>
+        <a href="#services">Emergency Repairs</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> VoltEdge Electrical. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
